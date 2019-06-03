@@ -1,0 +1,88 @@
+	<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+
+	<div>
+	<div class="parent" style="display:block;">
+		<div class="d-flex">
+	    	<div class="door" style="margin-left:50px;">
+	    		<img src="door.png" class="w-75 h-75">
+	    	</div>
+
+	        <div class="door2" style="margin-left:100px;">
+	    		<img src="door2.png" class="w-75 h-75">
+	    	</div>
+
+	    	<div class="door3" style="margin-left:200px;">
+	    		<img src="door3.png" class="w-75 h-75">
+	    	</div>
+	    </div>
+	</div>
+	<div class="harryP" style="display:none;">
+		<div style="background-image: url(bg.jpg); height: 1000px; background-size: cover;" class="backg">
+			<h2 style="color:white;">Найди метлу, палочку, мантию, автомат, кольцо и заработай 5 очков!</h2>
+			<h1 class="text-white o4ki">0</h1>
+				<button class="btn-success buttonx">Выйти из игры</button>
+					<img src="palochka.png"  style=" position: absolute; margin-top:50px; margin-left: 1000px;" class="palo4ka o4ki">
+					<img src="metla.png" style="height:100px; margin-top:500px; margin-right:1000px; position: absolute; right: 0; bottom: 0" class="metl4 o4ki">
+					<img src="ring.png" style="height:25px; margin-bottom:500px; position: absolute; right: 0; bottom: 0; margin-right:1000px" class="ring o4ki">
+					<img src="mantiya.png" style="height:50px; margin-top:520px; margin-right:900px; position: absolute; right: 0; bottom: 0; margin-left: 10px;" class="mantiya o4ki">
+					<img src="gun.png" style="height:50px; margin-top:520px;margin-left: 900px; position: absolute; right: 0; bottom: 0;" class="gun o4ki">
+				</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+
+		let points = 0
+		document.querySelector(".door").onclick = function(){
+			alert("Телепорт!");
+			document.querySelector(".harryP").style.display = "block";
+			document.querySelector(".door").style.display = "none";
+			document.querySelector(".door2").style.display = "none";
+			document.querySelector(".door3").style.display = "none";
+		}
+		document.querySelector(".palo4ka").onclick = function(){
+			document.querySelector(".palo4ka").style.display = "none";
+			points = points + 1
+			document.querySelector(".o4ki").innerHTML = points
+		}
+		document.querySelector(".metl4").onclick = function(){
+			document.querySelector(".metl4").style.display = "none";
+			points = points + 1
+			document.querySelector(".o4ki").innerHTML = points
+		}
+		document.querySelector(".ring").onclick = function(){
+			document.querySelector(".ring").style.display = "none";
+			points = points + 1
+			document.querySelector(".o4ki").innerHTML = points
+			
+		}
+		document.querySelector(".mantiya").onclick = function(){
+			document.querySelector(".mantiya").style.display = "none";
+			points = points + 1
+			document.querySelector(".o4ki").innerHTML = points
+		}
+		document.querySelector(".gun").onclick = function(){
+			document.querySelector(".gun").style.display = "none";
+			points = points + 1
+			document.querySelector(".o4ki").innerHTML = points
+		}
+		document.querySelector(".buttonx").onclick = function(){
+			document.querySelector(".backg").style.display = "none"
+			document.querySelector(".door").style.display = "block";
+			document.querySelector(".door2").style.display = "block";
+			document.querySelector(".door3").style.display = "block";
+		}
+		
+      	
+	
+
+		
+
+	</script>
+</body>
+</html>
